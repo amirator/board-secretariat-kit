@@ -1,0 +1,52 @@
+# SAMPLE / DEMO DATA. "Demo Coastal Industries Co." and every person below are fictional.
+# Names, emails (.example domain), roles and governance rules were invented for this demo.
+# Nothing here describes a real company, board or employer.
+company:
+  name: Demo Coastal Industries Co.
+  name_ar: شركة الساحل التجريبية للصناعات
+  registered_office: Demo Tower, Jeddah (fictional address)
+  timezone: Asia/Riyadh
+  weekend: [Fri, Sat]          # due dates that land here roll forward to the next working day
+  show_hijri: true             # print the Umm al-Qura date next to the Gregorian date
+  due_soon_days: 7             # action-log "Due soon" window
+  fonts:
+    latin: Calibri             # LibreOffice substitutes Carlito (same metrics) on Linux
+    arabic: Noto Naskh Arabic  # any installed Arabic font works; Word falls back if missing
+  secretary: YAM
+
+people:
+  - {id: SMU, name: Dr. Sami Al-Mutairi,   name_ar: د. سامي المطيري,   title: Chair,                          email: s.almutairi@demo-coastal.example}
+  - {id: NSH, name: Nora Al-Shehri,        name_ar: نورة الشهري,       title: Vice Chair,                     email: n.alshehri@demo-coastal.example}
+  - {id: KBS, name: Khalid Bin Saeed,      name_ar: خالد بن سعيد,      title: Managing Director and CEO,      email: k.binsaeed@demo-coastal.example}
+  - {id: RHD, name: Rania Haddad,          name_ar: رانيا حداد,        title: Independent Director,           email: r.haddad@demo-coastal.example}
+  - {id: OFR, name: Omar Farooqui,         name_ar: عمر فاروقي,        title: Independent Director,           email: o.farooqui@demo-coastal.example}
+  - {id: TZH, name: Turki Al-Zahrani,      name_ar: تركي الزهراني,     title: Non-Executive Director,         email: t.alzahrani@demo-coastal.example}
+  - {id: LMN, name: Laila Mansour,         name_ar: ليلى منصور,        title: Independent Director,           email: l.mansour@demo-coastal.example}
+  - {id: MGH, name: Majed Al-Ghamdi,       name_ar: ماجد الغامدي,      title: External Committee Member,      email: m.alghamdi@demo-coastal.example}
+  - {id: YAM, name: Yousef Al-Amri,        name_ar: يوسف العمري,       title: Board Secretary,                email: y.alamri@demo-coastal.example}
+  - {id: PNR, name: Priya Nair,            name_ar: بريا ناير,         title: Chief Financial Officer,        email: p.nair@demo-coastal.example}
+  - {id: HDR, name: Hisham Darwish,        name_ar: هشام درويش,        title: General Counsel,                email: h.darwish@demo-coastal.example}
+  - {id: SKH, name: Sara Khoury,           name_ar: سارة خوري,         title: Head of Internal Audit,         email: s.khoury@demo-coastal.example}
+  - {id: AQR, name: Ahmed Qureshi,         name_ar: أحمد قريشي,        title: Procurement Manager,            email: a.qureshi@demo-coastal.example}
+
+# Quorum and voting rules are settings, not legal advice. Set them from your own
+# articles of association and committee charters.
+bodies:
+  BOD:
+    name: Board of Directors
+    name_ar: مجلس الإدارة
+    resolution_prefix: BR
+    members: [SMU, NSH, KBS, RHD, OFR, TZH, LMN]
+    chair: SMU
+    quorum: {min_fraction: 0.5, min_count: 3}
+    special_majority: 2/3
+    chair_casting_vote: true
+  AC:
+    name: Audit Committee
+    name_ar: لجنة المراجعة
+    resolution_prefix: ACR
+    members: [LMN, OFR, RHD, MGH]
+    chair: LMN
+    quorum: {min_fraction: 0.5, min_count: 2}
+    special_majority: 2/3
+    chair_casting_vote: false

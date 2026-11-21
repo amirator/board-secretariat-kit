@@ -1,0 +1,88 @@
+# SAMPLE / DEMO DATA. Fictional Audit Committee meeting of a fictional company.
+meeting:
+  id: AC-2026-04
+  body: AC
+  title: Fourth Audit Committee Meeting of 2026
+  date: 2026-11-11
+  start: "10:00"
+  venue: Committee Room 2, Demo Tower, Jeddah, and Microsoft Teams
+  notice_date: 2026-11-04
+  next_meeting: 2027-02-10
+  previous_minutes: AC-2026-03 held on 9 September 2026
+
+agenda:
+  - {item: 1, title: "Opening, quorum and declarations of interest", purpose: Procedural, presenter: LMN, minutes: 5}
+  - {item: 2, title: Minutes of meeting AC-2026-03, purpose: Decision, presenter: YAM, minutes: 5, papers: [Draft minutes AC-2026-03]}
+  - {item: 3, title: Matters arising and action log, purpose: Information, presenter: YAM, minutes: 10, papers: [Matters arising report (generated)]}
+  - {item: 4, title: Q3 2026 interim financial statements, purpose: Decision, presenter: PNR, minutes: 25, papers: [Q3 2026 interim financial statements, External auditor review memo]}
+  - {item: 5, title: "Internal audit report: procurement cycle", purpose: Discussion, presenter: SKH, minutes: 25, papers: [Internal audit report IA-2026-07]}
+  - {item: 6, title: External auditor 2026 year-end audit plan, purpose: Decision, presenter: LMN, minutes: 15, papers: [Audit plan and fee proposal]}
+  - {item: 7, title: Any other business, purpose: Discussion, presenter: LMN, minutes: 5}
+
+attendance:
+  present: [LMN, OFR, RHD, MGH]
+  apologies: []
+  in_attendance:
+    - {person: PNR, items: "4"}
+    - {person: SKH, items: "3, 5"}
+    - {person: AQR, items: "5"}
+
+conflicts: []
+
+# Everything below is filled in by the secretary after the meeting.
+record:
+  opened: "10:03"
+  closed: "11:22"
+  items:
+    1:
+      notes:
+        - The Chair welcomed members and confirmed that notice had been given on 4 November 2026. No interests were declared.
+    2:
+      notes:
+        - The Committee reviewed the draft minutes of its previous meeting. No amendments were proposed.
+    3:
+      notes:
+        - The Secretary presented the action log. Action A-2026-009 (updated fixed-asset tagging procedure) was reported complete and closed.
+    4:
+      notes:
+        - The CFO presented the Q3 2026 interim financial statements. Revenue for the nine months was SAR 412.6 million against a budget of SAR 398.0 million (sample figures).
+        - The Committee asked for a breakdown of the SAR 6.1 million increase in trade receivables over 90 days before the Board meeting.
+    5:
+      notes:
+        - The Head of Internal Audit presented report IA-2026-07, which rated the procurement cycle "needs improvement". Three findings related to single-source purchases above SAR 250,000 without a documented waiver.
+        - Management agreed to update the procurement policy and to report waivers to the Committee each quarter.
+    6:
+      notes:
+        - The Committee reviewed the external auditor's year-end audit plan, materiality approach and fee proposal (SAR 640,000, sample figure).
+    7:
+      notes:
+        - No other business was raised.
+  resolutions:
+    - item: 2
+      title: Approval of the minutes of meeting AC-2026-03
+      text: approve the minutes of Audit Committee meeting AC-2026-03 held on 9 September 2026 as a true record and authorise the Committee Chair to sign them.
+      proposer: OFR
+      seconder: RHD
+      votes: unanimous
+      owner: YAM
+    - item: 4
+      title: Recommendation of the Q3 2026 interim financial statements
+      text: recommend that the Board of Directors approve the interim condensed financial statements for the period ended 30 September 2026.
+      proposer: RHD
+      seconder: MGH
+      votes: unanimous
+      owner: PNR
+    - item: 6
+      title: Approval of the 2026 year-end audit plan
+      text: approve the external auditor's audit plan for the year ending 31 December 2026 and recommend the proposed fee of SAR 640,000 to the Board.
+      proposer: MGH
+      seconder: OFR
+      votes: {for: 3, against: 0, abstain: 1}
+      owner: PNR
+  actions:
+    - {item: 4, action: Provide an ageing breakdown of trade receivables over 90 days to the Board pack, owner: PNR, due: 2026-11-15}
+    - {item: 5, action: Update the procurement policy to require documented single-source waivers above SAR 250000, owner: AQR, due: 2026-12-20}
+    - {item: 5, action: Add a quarterly single-source waiver report to the Committee calendar, owner: YAM, due: 2027-01-31}
+  action_updates:
+    - {id: A-2026-009, status: Closed, note: Procedure issued and filed.}
+  deferred: []

@@ -1,0 +1,128 @@
+# SAMPLE / DEMO DATA. Fictional Board meeting of a fictional company.
+meeting:
+  id: BOD-2026-04
+  body: BOD
+  title: Fourth Board Meeting of 2026
+  date: 2026-11-18
+  start: "16:00"
+  venue: Board Room, Demo Tower, Jeddah, and Microsoft Teams
+  notice_date: 2026-11-04
+  next_meeting: 2026-12-16
+  previous_minutes: BOD-2026-03 held on 16 September 2026
+
+agenda:
+  - {item: 1,  title: "Opening, quorum and declarations of interest", purpose: Procedural, presenter: SMU, minutes: 5}
+  - {item: 2,  title: Minutes of meeting BOD-2026-03, purpose: Decision, presenter: YAM, minutes: 5, papers: [Draft minutes BOD-2026-03]}
+  - {item: 3,  title: Matters arising and action log, purpose: Information, presenter: YAM, minutes: 10, papers: [Matters arising report (generated)]}
+  - {item: 4,  title: CEO report for Q3 2026, purpose: Information, presenter: KBS, minutes: 20, papers: [CEO report Q3 2026]}
+  - {item: 5,  title: Q3 2026 interim financial statements, purpose: Decision, presenter: PNR, minutes: 15, papers: [Q3 2026 interim financial statements, Audit Committee recommendation]}
+  - {item: 6,  title: Lease of the Jeddah South warehouse, purpose: Decision, presenter: KBS, minutes: 20, papers: [Lease proposal and evaluation of three offers]}
+  - {item: 7,  title: 2027 budget and business plan, purpose: Decision, presenter: PNR, minutes: 30, papers: [2027 budget and business plan]}
+  - {item: 8,  title: Related-party transactions policy update, purpose: Decision, presenter: HDR, minutes: 10, papers: ["Draft policy, marked-up"]}
+  - {item: 9,  title: Updated delegation of authority matrix, purpose: Decision, presenter: HDR, minutes: 10, papers: [Delegation of authority matrix v4]}
+  - {item: 10, title: Committee reports, purpose: Information, presenter: LMN, minutes: 10, papers: [Audit Committee report AC-2026-04]}
+  - {item: 11, title: Any other business, purpose: Discussion, presenter: SMU, minutes: 5}
+  - {item: 12, title: Date of next meeting, purpose: Procedural, presenter: YAM, minutes: 5}
+
+attendance:
+  present: [SMU, NSH, KBS, RHD, OFR, LMN]
+  apologies: [TZH]
+  in_attendance:
+    - {person: PNR, items: "5, 7"}
+    - {person: HDR, items: "6, 8, 9"}
+
+conflicts:
+  - person: OFR
+    item: 6
+    nature: Non-executive director of Demo Logistics Parks Co. (fictional), one of the bidders for the lease. Left the room for the item and did not vote.
+
+record:
+  opened: "16:04"
+  closed: "18:12"
+  items:
+    1:
+      notes:
+        - The Chair confirmed that notice had been given on 4 November 2026 and that a quorum was present. Apologies were received from Turki Al-Zahrani.
+        - Omar Farooqui declared an interest in item 6 (see declarations above).
+    2:
+      notes:
+        - The minutes of meeting BOD-2026-03 were reviewed. A typographical correction to item 5 was agreed.
+    3:
+      notes:
+        - The Secretary presented the matters arising report. Action A-2026-012 (insurance renewal) was closed. Action A-2026-015 (ERP go-live report) remains overdue; the CEO undertook to circulate it by 30 November 2026.
+    4:
+      notes:
+        - The CEO presented the Q3 report, covering order intake, the Yanbu line upgrade and safety performance (zero lost-time injuries in the quarter, sample figure).
+    5:
+      notes:
+        - The Audit Committee Chair reported that the Committee had reviewed the statements on 11 November 2026 and recommended approval.
+    6:
+      notes:
+        - Omar Farooqui left the meeting for this item.
+        - The CEO presented three offers for a 12,000 m2 warehouse. The recommended offer is SAR 2.9 million a year for five years (sample figure), the lowest cost per square metre of the three.
+        - Omar Farooqui rejoined the meeting after the vote.
+    7:
+      notes:
+        - The CFO presented the 2027 budget, with revenue of SAR 585 million and capital expenditure of SAR 48 million (sample figures).
+        - One director asked for the capital expenditure to be phased by quarter, with a review at the Q2 2027 meeting.
+    8:
+      notes:
+        - The item was deferred to the next meeting so that the General Counsel can reflect comments received from two directors.
+    9:
+      notes:
+        - The General Counsel presented version 4 of the delegation of authority matrix, which lowers the CEO's single-source purchasing limit from SAR 1,000,000 to SAR 500,000.
+    10:
+      notes:
+        - The Audit Committee Chair summarised the 11 November 2026 meeting, including the procurement internal audit findings.
+    11:
+      notes:
+        - No other business was raised.
+    12:
+      notes:
+        - The next meeting will be held on Wednesday 16 December 2026 at 16:00.
+  resolutions:
+    - item: 2
+      title: Approval of the minutes of meeting BOD-2026-03
+      text: approve the minutes of Board meeting BOD-2026-03 held on 16 September 2026, as amended, as a true record and authorise the Chair to sign them.
+      proposer: NSH
+      seconder: RHD
+      votes: unanimous
+      owner: YAM
+    - item: 5
+      title: Approval of the Q3 2026 interim financial statements
+      text: approve the interim condensed financial statements for the period ended 30 September 2026, on the recommendation of the Audit Committee, and authorise the Chair and the CEO to sign them.
+      proposer: LMN
+      seconder: NSH
+      votes: unanimous
+      owner: PNR
+    - item: 6
+      title: Lease of the Jeddah South warehouse
+      text: approve a five-year lease of the Jeddah South warehouse at an annual rent not exceeding SAR 2,900,000 and authorise the CEO to sign the lease.
+      proposer: RHD
+      seconder: LMN
+      votes: unanimous
+      owner: KBS
+    - item: 7
+      title: Approval of the 2027 budget and business plan
+      text: approve the 2027 budget and business plan as presented, subject to capital expenditure being released by quarter.
+      proposer: KBS
+      seconder: NSH
+      votes: {for: 4, against: 1, abstain: 1}
+      owner: PNR
+    - item: 9
+      title: Adoption of the delegation of authority matrix v4
+      text: adopt version 4 of the delegation of authority matrix with effect from 1 December 2026.
+      type: special
+      proposer: LMN
+      seconder: RHD
+      votes: {for: 5, against: 0, abstain: 1}
+      owner: HDR
+  actions:
+    - {item: 6, action: Sign the Jeddah South warehouse lease and file a copy with the Secretary, owner: KBS, due: 2026-12-04}
+    - {item: 7, action: Issue quarterly capital expenditure release schedule for 2027, owner: PNR, due: 2026-12-10}
+    - {item: 8, action: Recirculate the related-party transactions policy with directors' comments reflected, owner: HDR, due: 2026-12-02}
+    - {item: 9, action: Communicate the new delegation of authority limits to all budget holders, owner: HDR, due: 2026-11-28}
+  action_updates:
+    - {id: A-2026-012, status: Closed, note: Policy renewed on 1 November 2026.}
+    - {id: A-2026-015, status: In progress, due: 2026-11-30, note: Due date revised by the Board on 18 November 2026.}
+  deferred: [8]
